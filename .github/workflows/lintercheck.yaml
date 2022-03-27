@@ -18,11 +18,11 @@ jobs:
           path: |
             ~/. cahe/pip
           key: pip-${{ hashFiles('**/requirements.txt') }}
-      - name: Install requirements
+      - name: Install flake8
         if: steps.pip-cache.outputs.cache-hit != 'true'
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install flake8
       - name: Run flake8
         run: |
           echo 'Run flake8'
