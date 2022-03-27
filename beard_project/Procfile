@@ -1,0 +1,1 @@
+web: gunicorn beard.wsgi --log-file -
