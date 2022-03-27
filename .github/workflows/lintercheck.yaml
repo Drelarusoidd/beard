@@ -2,7 +2,7 @@ name: linter
 
 on:
   push:
-    branches: [*]
+    branches: [master, *]
 
 jobs:
   linter-job:
